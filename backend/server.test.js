@@ -25,5 +25,15 @@ describe ("Test the root path" , () => {
     })
 })
 
+describe ("Test the root path" , () => {
+    test ("response the POST method" , () => {
+        const response = request(app).post("https://localhost:8000/User/add").send({
+            "Name" : "Maryam",
+            
+        })
+            expect(response.statusCode).toBe(200);
+    })
+})
+
 
 
